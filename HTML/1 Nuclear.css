@@ -1,0 +1,27 @@
+table{
+  border: 1px solid black;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  font-size: small;
+}
+
+table thead{
+  background-color: aqua;
+}
+
+table tfoot{
+  background-color: gainsboro;
+}
+
+table th[scope="row"]{
+  background-color: gainsboro;
+  text-align: left;
+}
+
+
+
+table td{
+  border: 1px solid grey;
+  text-align: center;
+}
