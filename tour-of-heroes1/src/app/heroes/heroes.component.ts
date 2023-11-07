@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Hero } from '../hero';
 // import { HEROES } from '../mock-heroes';
 import { HeroService } from '../hero.service';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-heroes',
@@ -12,18 +13,24 @@ export class HeroesComponent {
   heroes: Hero[] = [];
   selectedHero?: Hero;
 
-  constructor(private heroService: HeroService){} //its good practice to keep constructor body empty
+  //its good practice to keep constructor body empty
+  constructor(private heroService: HeroService, private messageService: MessageService){} 
+
   ngOnInit(): void{
     this.getHeroes();
   }
 
+  // this method will call the service method asynchronously (because heroService.getHeroes() return Observable and 
+  // we subscribe it). Observable<Hero[]> return immediately,without value. It emits Hero[] or an error later.
+  // We wait for emitting by .subscribe
   getHeroes(): void{
-    this.heroes = this.heroService.getHeroes();
+    this.heroService.getHeroes()
+      .subscribe(heroes => this.heroes = heroes);
   }
 
   onSelect(hero: Hero){
-    console.log("hi");
     this.selectedHero = hero;
+    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
   }
 
 }
