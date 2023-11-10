@@ -1,0 +1,13 @@
+.my-button {
+  /* font-family: Georgia, 'Times New Roman', Times, serif; */
+  font-weight: 600;
+  color: black;
+  background-color: rgb(234, 234, 234);
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.my-button:hover {
+  color: black;
+  background-color: rgb(158, 158, 158);
+}
