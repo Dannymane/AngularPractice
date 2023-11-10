@@ -25,3 +25,8 @@ table td{
   border: 1px solid grey;
   text-align: center;
 }
+
+.text-align-justify {
+  text-align: justify;
+  padding: 0px 40px
+}
