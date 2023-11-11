@@ -28,9 +28,9 @@ export class HeroesComponent {
       .subscribe(heroes => this.heroes = heroes);
   }
 
-  onSelect(hero: Hero){
-    this.selectedHero = hero;
-    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
-  }
+  // onSelect(hero: Hero){
+  //   this.selectedHero = hero;
+  //   this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
+  // }
 
 }
