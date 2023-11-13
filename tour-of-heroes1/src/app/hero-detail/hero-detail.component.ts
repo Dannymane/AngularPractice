@@ -26,4 +26,11 @@ ngOnInit():void {
 GoBack(): void{
   this.location.back();
 }
+
+Save(): void{
+  if(this.hero){
+    this.heroService.UpdateHero(this.hero)
+      .subscribe(()=>this.GoBack)l
+  }
+}
 }
