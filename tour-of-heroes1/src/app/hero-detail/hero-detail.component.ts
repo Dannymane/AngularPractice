@@ -20,7 +20,7 @@ constructor(private heroService: HeroService,
 ngOnInit():void {
   // const id = Number(this.router.snapshot.params['id']);
   const id = Number(this.router.snapshot.paramMap.get('id'));
-  this.heroService.getHeroById(id).subscribe(h => this.hero = h);
+  this.heroService.getHero(id).subscribe(h => this.hero = h);
 }
 
 GoBack(): void{
@@ -30,7 +30,7 @@ GoBack(): void{
 Save(): void{
   if(this.hero){
     this.heroService.UpdateHero(this.hero)
-      .subscribe(()=>this.GoBack)l
+      .subscribe(()=>this.GoBack());
   }
 }
 }

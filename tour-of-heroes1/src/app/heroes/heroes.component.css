@@ -8,6 +8,7 @@
 .heroes li {
   position: relative;
   cursor: pointer;
+  min-width: 400px;
 }
 
 .heroes li:hover {
@@ -22,8 +23,8 @@
   padding: .3em 0;
   height: 1.6em;
   border-radius: 4px;
-  display: block;
-  width: 100%;
+  display: inline-block;
+  width: 60%;
 }
 
 .heroes a:hover {
@@ -51,4 +52,15 @@
   text-align: right;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
+}
+
+button.delete {
+  position: absolute;
+  left: 210px;
+  top: 25%;
+  background-color: white;
+  color:  #525252;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 1px 10px 3px 10px;
 }
