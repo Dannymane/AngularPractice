@@ -6,6 +6,9 @@ table{
   font-size: small;
 }
 
+.div{
+  background-color: green;
+}
 table thead{
   background-color: aqua;
 }
@@ -19,8 +22,6 @@ table th[scope="row"]{
   text-align: left;
 }
 
-
-
 table td{
   border: 1px solid grey;
   text-align: center;
@@ -29,4 +30,37 @@ table td{
 .text-align-justify {
   text-align: justify;
   padding: 0px 40px
+}
+
+#flexbox {
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 10px;
+  max-width: 900px;
+  flex-shrink: 1;
+}
+
+#div1, #div2, #div3 {
+  height: 100px;
+}
+
+#div1{
+  background-color: coral;
+  width: 100%;
+  flex-shrink: 1;
+}
+
+#div2{
+  background-color: lightblue;
+  width: 200px;
+  flex-shrink: 0;
+
+}
+
+#div3{
+  background-color: lightgreen;
+  width: 200px;
+  flex-shrink: 0;
+
 }
