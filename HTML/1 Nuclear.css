@@ -30,3 +30,20 @@ table td{
   text-align: justify;
   padding: 0px 40px
 }
+
+.big-font {
+  font-size: 80px;
+}
+
+#box {
+      background-color: brown;
+      padding: 100px;
+}
+
+#box div:first-child{
+  padding: 20px;
+  background-color: blue;
+}
+:nth-child(8){
+  padding: 10px;
+}
